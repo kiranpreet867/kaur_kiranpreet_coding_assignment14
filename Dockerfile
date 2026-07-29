@@ -1,9 +1,8 @@
+FROM node:20-alpine AS build
 
-FROM node:20-alpine
+WORKDIR /kaur_kiranpreet_final_site
 
-WORKDIR /kaur_kiranpreet_ui_garden_build_checks
-
-COPY package*.json ./
+COPY package.json ./
 
 RUN npm install
 
@@ -11,8 +10,11 @@ COPY . .
 
 RUN npm run build
 
-RUN npm install -g serve
+FROM nginx:1.27-alpine
 
-EXPOSE 8018
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /kaur_kiranpreet_final_site/build /usr/share/nginx/html
 
-CMD ["serve", "-s", "build", "-l", "8018"]
+EXPOSE 5575
+
+CMD ["nginx", "-g", "daemon off;"]

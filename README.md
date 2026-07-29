@@ -1,16 +1,22 @@
-# Kaur_Kiranpreet_Coding_Assignment13
+# Kaur_Kiranpreet_Coding_Assignment14
 
 ## Overview
 
-This project is an updated React UI Component Library created for WEBD-3012 Business Systems Build and Testing.
-
-Assignment 13 extends Assignment 12 by adding code quality checks and continuous integration to the development process. The project uses Husky pre-commit hooks, Prettier, ESLint, React tests, GitHub Actions, and Docker to ensure code quality before deployment.
+This project is a React Portfolio Website developed for WEBD-3012 Business Systems Build and Testing. The portfolio showcases projects completed throughout the Web Development program while demonstrating the use of reusable React components, code quality tools, automated testing, Docker deployment, and GitHub Actions.
 
 ---
 
 ## Features
 
-The UI Component Library includes the following reusable components:
+The portfolio includes the following sections:
+
+- Home
+- About Me
+- Skills
+- Projects
+- Contact
+
+The website is built using reusable UI components developed in previous assignments, including:
 
 - Button
 - Label
@@ -30,10 +36,12 @@ The UI Component Library includes the following reusable components:
 
 ## Code Quality Checks
 
-The project automatically performs the following quality checks:
+The project includes automated quality checks to ensure consistent and reliable code.
 
-- Prettier formatting check
-- ESLint code quality check
+The following checks are performed:
+
+- Prettier formatting
+- ESLint code analysis
 - React unit tests
 - Production build verification
 
@@ -41,33 +49,31 @@ The project automatically performs the following quality checks:
 
 ## Husky Pre-Commit Hook
 
-Husky is configured to prevent commits if any quality check fails.
+Husky is configured to prevent commits when quality checks fail.
 
 Before every commit, Husky automatically runs:
 
-
-bash
+```bash
 npm run check
+```
 
+This command executes:
 
-The command executes:
-
-
-bash
+```bash
 npm run format
 npm run lint
 npm test -- --watchAll=false
+```
 
-
-If any of these checks fail, the commit is blocked until the issues are fixed.
+If any check fails, the commit is blocked until the issues are corrected.
 
 ---
 
 ## GitHub Actions
 
-GitHub Actions is configured to automatically run quality checks whenever code is pushed to GitHub or a Pull Request is created.
+GitHub Actions automatically performs continuous integration whenever code is pushed to GitHub or a Pull Request is created.
 
-The workflow performs the following:
+The workflow performs the following tasks:
 
 - Install project dependencies
 - Run Prettier
@@ -75,68 +81,69 @@ The workflow performs the following:
 - Run React tests
 - Build the production application
 
-This ensures the same quality checks are enforced even if local pre-commit hooks are bypassed.
+This helps ensure code quality before deployment.
+
+---
+
+## Installation
+
+Install project dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm start
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
 
 ---
 
 ## Docker Instructions
 
-### Build the Docker image
+Build the Docker image:
 
+```bash
+docker build -t kaur_kiranpreet_coding_assignment14 .
+```
 
-bash
-docker build -t kaur_kiranpreet_coding_assignment13 .
+Run the Docker container:
 
+```bash
+docker run --name kaur_kiranpreet_coding_assignment14 -p 5575:5575 kaur_kiranpreet_coding_assignment14
+```
 
-### Run the Docker container
+Open the application:
 
-
-bash
-docker run --name kaur_kiranpreet_coding_assignment13 -p 8018:8018 kaur_kiranpreet_coding_assignment13
-
-
-### Open the application
-
-
-http://localhost:8018
-
-
----
-
-## Docker Details
-
-**Container Name**
-
-
-kaur_kiranpreet_coding_assignment13
-
-
-**Working Directory**
-
-
-/kaur_kiranpreet_ui_garden_build_checks
-
-
-**Port**
-
-
-8018
-
+```text
+http://localhost:5575
+```
 
 ---
 
 ## Project Structure
 
-
+```text
 src/
+public/
 components/
 .storybook/
+.github/
 .github/workflows/
 .husky/
 Dockerfile
+nginx.conf
 README.md
 package.json
-
+```
 
 ---
 
@@ -157,11 +164,10 @@ package.json
 
 ## GitHub Repository
 
-https://github.com/kiranpreet867/kaur_kiranpreet_coding_assignment13
-
+https://github.com/kiranpreet867/kaur_kiranpreet_coding_assignment14
 
 ---
 
 ## Author
 
-Kiranpreet Kaur 
+Kiranpreet Kaur

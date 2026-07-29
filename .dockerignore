@@ -1,6 +1,6 @@
 node_modules
 build
+coverage
 .git
 .vscode
-storybook-static
-debug-storybook.log
+npm-debug.log
