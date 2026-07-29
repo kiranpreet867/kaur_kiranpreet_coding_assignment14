@@ -382,10 +382,10 @@ function App() {
           <SectionTitle>Basic Information</SectionTitle>
 
           <SectionIntroduction>
-            I am a web development student with experience in React,
-            TypeScript, PHP, Python, databases, testing, Docker, and continuous
-            integration. I enjoy creating user-friendly applications and
-            learning technologies that improve software quality and delivery.
+            I am a web development student with experience in React, TypeScript,
+            PHP, Python, databases, testing, Docker, and continuous integration.
+            I enjoy creating user-friendly applications and learning
+            technologies that improve software quality and delivery.
           </SectionIntroduction>
         </Section>
 
@@ -444,9 +444,9 @@ function App() {
               <h3>Languages and Frameworks</h3>
 
               <p>
-                I use these technologies to create responsive websites,
-                reusable components, secure applications, and data
-                visualization projects.
+                I use these technologies to create responsive websites, reusable
+                components, secure applications, and data visualization
+                projects.
               </p>
 
               <ul>
@@ -538,8 +538,8 @@ function App() {
                     extensions
                   </td>
                   <td>
-                    Provides formatting, code-quality feedback, Git support,
-                    and container management.
+                    Provides formatting, code-quality feedback, Git support, and
+                    container management.
                   </td>
                 </tr>
 
